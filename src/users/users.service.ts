@@ -25,7 +25,7 @@ export class UsersService {
       ...userData,
       password: hashedPassword,
     });
-    return createdUser
+    return createdUser.toObject();
   }
 
   async findByEmail(email: string): Promise<User | null> {
